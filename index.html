@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta property="og:title" content="Symmetry Autumn of Code 2023">
+    <meta property="og:description"
+        content="Symmetry Autumn of Code is an annual programming event sponsored by Symmetry Investments and organized by the D Language Foundation to enhance the D language ecosystem.">
+    <meta property="og:url" content="https://saoc.io/">
+    <meta property="og:type" content="website">
+    <!--TODO: og:image stuff-->
+    <link href="./includes/w3.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: Arial, "Helvetica Neue" Helvetica, sans-serif;
+        }
+        main {
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            background-color: whitesmoke;
+        }
+        header {
+            text-align: center;
+        }
+        aside {
+            background-color: white;
+        }
+        h1, h2, h3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1, h2 {
+            padding-left: 5px;
+            text-transform: uppercase;
+        }
+        h1 {
+            border-bottom: solid;
+        }
+        h2 {
+            background-color: darkgray;
+        }
+
+        .pheader {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            font-size:larger;
+        }
+        .pheader::before {
+            margin: 6px;
+            content: "\2217";
+        }
+
+        #menu {
+            background-color: darkgray;
+        }
+
+        @media screen and (min-width: 600px) {
+            header {
+                text-align: left;
+            }
+        }
+        @media screen and (min-width: 1080px) {
+            main {
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body class="w3-justify">
+    <nav class="w3-card-2" id="menu">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-btn w3-block">HOME</a>
+            <a href="#details" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">ABOUT</a>
+            <a href="#participants" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">APPLY</a>
+            <a href="#faq" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">FAQ</a>
+            <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">DLANG.ORG</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-btn w3-right w3-hide-large" onclick="hamburger()">&#9776;</a>
+        </div>
+        <div id="small-menu" class="w3-bar-block w3-hide w3-hide-large">
+            <a href="#details" class="w3-bar-item w3-btn w3-block">ABOUT</a>
+            <a href="#participants" class="w3-bar-item w3-btn w3-block">APPLY</a>
+            <a href="#faq" class="w3-bar-item w3-btn w3-block">FAQ</a>
+            <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block">DLANG.ORG</a>
+        </div>
+    </nav>
+    <header class="w3-container" id="home">
+        <h1>Symmetry Autumn of Code</h1>
+    </header>
+    <main role="main">
+        <section>
+            <article id="introduction" class="w3-card-2">
+                <h2>SAOC 2023</h2>
+                <div class="w3-container">
+                    <p>
+                        <a href="https://dlang.org">The D Language Foundation</a> and <a
+                        href="http://symmetryinvestments.com/">Symmetry Investments</a> are pleased to present the 2023
+                        edition of the Symmetry Autumn of Code (SAOC). We invite motivated individuals who enjoy solving
+                        problems with code to apply for the opportunity to earn money hacking on D projects! You <a
+                        href="#participants">can find all the details</a> on who's eligible and how to apply below.
+                    </p>
+                    <p>
+                        Those who participate will need mentors, so we're also looking for experienced D programmers to take on
+                        the job. If you know the D programming language and enjoy sharing your knowledge with others, we invite
+                        you to put your skills to use in guiding and advising the coders who will join us this autumn. We'll
+                        even pay you for it! <a href="#mentors">Keep reading to see how you can participate</a>.
+                    </p>
+                    <p>
+                        We're always looking for more project ideas from the D community. Each SAOC applicant will need to
+                        submit a project proposal as part of the application. We ask anyone with an idea for a project that
+                        would benefit the D ecosystem and that a solo programmer could reasonably expect to work on
+                        part-time for four months, to <a href="#community">please let us know.</a>
+                    </p>
+                </div>
+                <aside id="overview" class="w3-container w3-card-2">
+                    <h3>The Five Ws</h3>
+                    <ul>
+                        <li><b>Who</b>: Coders who are at least 18 years of age, with preference given to university students.</li>
+                        <li><b>What</b>: Get paid to create a new project in the D ecosystem or improve an existing one using the D programming language.</li>
+                        <li><b>When</b>: From September 15, 2023, to January 15, 2024.</li>
+                        <li><b>Where</b>: Your favorite coding space.</li>
+                        <li><b>Why</b>: To enrich the D programming language ecosystem.</li>
+                        <li><b>How</b>: Send your application (described below) to <a href="mailto:social@dlang.org">social@dlang.org</a>.</li>
+                    </ul>
+                </aside>
+            </article>
+
+        </section>
+        <section>
+            <article id="details" class="w3-card-2">
+                <h2>The Details</h2>
+                <div class="w3-container">
+                    <h3>What's in it for you</h3>
+                    <p>
+                        Participants will be tasked with completing four monthly milestones for a project using the D
+                        programming language. Each participant will be paid <b>USD $1000</b> upon successful completion
+                        of each of the first three milestones (a total of <b>$3000</b> per participant). At the end of
+                        the fourth milestone, the overall progress of each participant will be evaluated by the SAOC
+                        committee, and at least one participant will be selected to receive a final payment of <b>USD
+                        $1000</b>. That lucky coder will also be eligible for <b>a free pass to the next real-world
+                        DConf</b>, including reimbursement of travel and hotel expenses.
+                    </p>
+                </div>
+                <aside class="w3-container w3-card-2">
+                    <h3>Important dates</h3>
+                    <ul>
+                        <li><b>August 20th</b> - Application deadline</li>
+                        <li><b>August 27th</b> - Applicants notified of their selection status</li>
+                        <li><b>September 1st</b> - Project planning phase begins</li>
+                        <li><b>September 15th</b> - Projects begin</li>
+                        <li><b>October 14th</b> - Milestone 1 ends</li>
+                        <li><b>October 15th</b> - Milestone 2 begins</li>
+                        <li><b>October 21st</b> - Milestone 1 report submission deadline</li>
+                        <li><b>November 14th</b> - Milestone 2 ends</li>
+                        <li><b>November 15th</b> - Milestone 3 begins</li>
+                        <li><b>November 21st</b> - Milestone 2 report submission deadline</li>
+                        <li><b>December 14th</b> - Milestone 3 ends</li>
+                        <li><b>December 15th</b> - Milestone 4 begins</li>
+                        <li><b>December 21st</b> - Milestone 3 report submission deadline</li>
+                        <li><b>January 14th</b> - Milestone 4 ends</li>
+                        <li><b>January 21st</b> - Milestone 4 report submission deadline</li>
+                        <li><b>February 11th</b> - Final result announced</li>
+                    </ul>
+                </aside>
+                <div class="w3-container">
+                    <h3 id="participants">Participants</h3>
+                    <p>
+                        This event is open to anyone over 18, with preference given to undergraduate or postgraduate
+                        coders currently enrolled in a school program. We are looking for creative, driven, and
+                        goal-oriented individuals who are willing to contribute to the D programming language. Those
+                        looking to participate in the Symmetry Autumn of Code 2023 should expect to propose an idea for
+                        a new open-source project or to establish specific goals for improving an existing project,
+                        finalize milestones for evaluation of progress on the project, and work with a mentor for four
+                        months to ensure the milestones are met. Participants should expect to put in 20 hours of work
+                        each week, keep their mentor updated on their progress, provide status updates in the D forums,
+                        and work with their mentor to submit monthly progress reports for review by the
+                        SAOC judges.
+                    </p>
+                    <p>
+                        To apply, please send a project proposal and résumé to <a
+                        href="mailto:social@dlang.org">social@dlang.org</a>. Make sure the subject line reads “SAOC
+                        Application”, and that the project proposal and résumé are attached as files. The proposal is where
+                        you sell us on your project. The résumé is where you show us why you're the person to get it done.
+                        <strong>Markdown is the preferred format. Please do not send files in a word processor format (DOCX,
+                        ODT, etc.) or PDF</strong>.
+                    </p>
+                    <div id="propsals">
+                        <p class="pheader"><span>Project proposals</span></p>
+                        <p>
+                            In 800 words or less, describe the project to which you're willing to devote four months of
+                            work. Why did you select it? What specific goals do you want to achieve? Will it be completed in
+                            four months of effort at 20 hrs/week, or will more work be required beyond the event? How will
+                            it benefit the D ecosystem and/or community?
+                        </p>
+                        <p>
+                            Your project should require enough effort to keep you occupied throughout the event while also
+                            being beneficial to the D community. You can find a list of project ideas in <a
+                            href="https://github.com/dlang/project-ideas/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">the
+                            dlang/project-ideas repository</a>. Those tagged with the <code>SAOC</code> label were suggested
+                            specifically for SAOC, but any project may be suitable as long as it meets the aforementioned
+                            criteria.
+                        </p>
+                        <p>
+                            It is not an absolute requirement that applicants find a mentor before applying, but doing
+                            so will have a positive impact on the evaluation of the application. As such, applicants are
+                            encouraged to make an effort to find potential mentors before the application is submitted.
+                            Once an applicant decides upon a project, a good first step toward finding a mentor would be
+                            a post in <a href="https://forum.dlang.org/group/announce">the D.announce forum</a>.
+                        </p>
+                    </div>
+                    <div id="resume">
+                        <p class="pheader"><span>Résumé</span></p>
+                        <p>
+                            Briefly explain who you are and why you should be selected. Describe your experience working
+                            with the D programming language or the language you're most comfortable working with. Tell us
+                            about your life as a programmer: programming languages you've learned, projects you've worked
+                            on, and programming-related topics you've studied. We recommend including a link to your GitHub
+                            profile if you have any existing work there that you'd like us to see.
+                        </p>
+                        <p>
+                            Note that you aren't applying for a job! We will not take into consideration your general
+                            education or work history. We only want to get an idea of your level of programming experience.
+                            It will also help us if you let us know what your course workload or your work schedule will be
+                            like for the duration of the event.
+                        </p>
+                        <p>
+                            If you are currently employed, please be sure to include your employer's name and a point of
+                            contact. Before submitting your application, you should make sure your employer imposes no
+                            restrictions on your participation in this event and that you are free to contribute source code
+                            to open-source projects. If your employer imposes any restrictions but is willing to waive them
+                            for this event, please provide proof of such, or the means to obtain proof of such, as part of
+                            your application. If your application is selected, failure to disclose this information could
+                            result in your removal from the event.
+                        </p>
+                    </div>
+                    <h3 id="mentors">Mentors</h3>
+                    <p>
+                        We are looking for patient and experienced D programmers who are willing to provide support and
+                        guidance to the coders who pursue their projects during the four months of SAOC. Mentors are
+                        volunteers who the participants can look to for advice on the D programming language and how to
+                        approach solving the problems they encounter as they carry out their work. Participants and mentors
+                        will work together to establish the project milestones that will be used to evaluate performance.
+                        Mentors will be expected to keep abreast of their coder's progress and to encourage their coder in
+                        achieving each milestone.
+                    </p>
+                    <p>
+                        At the end of SAOC 2023, each mentor whose student successfully completes the event will receive
+                        a one-time payment of <b>$500</b>. Mentors of unsuccessful projects may also be eligible for the
+                        same payment at the SAOC committee's discretion.
+                    </p>
+                    <p>
+                        If you are interested in becoming a mentor, please submit an email to social@dlang.org and let
+                        us know which project, or what kinds of projects, you would be willing to mentor, as well as the
+                        number of hours per week you can make yourself available to your coder during the event. The
+                        event organizers may ask for more information, such as examples of your level of experience with
+                        D, before deciding to accept your offer. Also, please pay attention to <a
+                        href="https://forum.dlang.org/group/announce">the D.announce forum</a> and be on the lookout for
+                        SAOC applicants in need of a mentor.
+                    </p>
+                    <p>
+                        Please note that mentors are not allowed to simultaneously participate as coders. Choose to apply only for one role!
+                    </p>
+                    <h3 id="community">Community</h3>
+                    <p>
+                        Community members are encouraged to submit ideas for potential projects. Project suggestions should
+                        require at least four months of work (assuming a minimum of 20 hours per week) and should be
+                        beneficial to the D community. Ideally, each project suggestion should outline specific goals that
+                        participants and their mentors can use to measure progress. The project should also provide a
+                        reasonable amount of challenge. For example, <i>improve Visual D</i> is not an acceptable
+                        suggestion, but a list of specific features to add to Visual D is fine.
+                    </p>
+                    <p>
+                        Develop your project ideas in <a href="https://forum.dlang.org/group/general">the D forums</a> and
+                        submit them as individual issues to <a href="https://github.com/dlang/project-ideas/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">the
+                        dlang/project-ideas repository</a>.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article id="faq" class="w3-card-2">
+                <h2>FAQ</h2>
+                <div class="w3-container">
+                    <p class="pheader"><span>Can I use other languages alongside the D language in my project?</span></p>
+                    <p>
+                        Yes, but make sure that the focus is on the D language. We are more likely to select applicants that
+                        prioritize it.
+                    </p>
+                    <p class="pheader"><span>How do you select applicants?</span></p>
+                    <p>
+                        We like to see experience with the D language, but a good track record of finished projects in
+                        any language is valuable. Preference will be given to graduate and postgraduate students. The
+                        proposed project's perceived benefit to the D community is a big factor in the decision, and so
+                        is the quality of the proposal. Applicants who are motivated to research their project and
+                        provide a solid description of the project in the proposal are just the sort of programmers
+                        we're looking for. Finding a mentor before applying is not a big factor, but can make the
+                        difference if there are more proposals than available slots when all other things are equal.
+                    </p>
+                    <p class="pheader"><span>Can I work with a partner or a team of people?</span></p>
+                    <p>
+                        No. Symmetry Autumn of Code is intended for solo work.
+                    </p>
+                    <p class="pheader"><span>Can I earn course credit for participating in SAOC?</span></p>
+                    <p>
+                        Please check with your school for their policy. If they determine you are eligible for course
+                        credit, we can provide documentation for them upon a successful final evaluation of your SAOC
+                        project.
+                    </p>
+                    <p class="pheader"><span>Can the schedule be adjusted to adapt to my school or work schedule?</span></p>
+                    <p>
+                        Unfortunately, no. We understand that our schedule will not work for everyone, and we are sorry if
+                        it conflicts with yours. However, we welcome contributions to D outside of SAOC.
+                    </p>
+                    <p class="pheader"><span>How do I find a mentor?</span></p>
+                    <p>
+                        A post in <a href="https://forum.dlang.org/group/announce">the D.announce forum</a> is the best
+                        place to start.
+                    </p>
+                    <p>
+                        It isn't strictly necessary to find a mentor for a successful application. Doing so may increase
+                        the chances an application will be successful and will certainly make the process easier for all
+                        involved. If you are unable to find a mentor before submitting a successful application, we will
+                        try to assist in matching you up with a mentor suitable for your project,  If you already know
+                        someone who would be skilled in your proposed project area, don't hesitate to get in touch with
+                        them to discuss your project and let us know about it in your application.
+                    </p>
+                    <p class="pheader"><span>Is SAOC considered an internship, a job, or any form of employment?</span></p>
+                    <p>
+                        None of the above. SAOC is an activity that the participants perform as independent developers for
+                        which they are paid a stipend. Applicants should check with their school or employer to ensure that
+                        participation in SAOC does not violate any school or local government regulations or contractual
+                        requirements.
+                    </p>
+                    <p class="pheader"><span>What if my school/employer/local government does prohibit me from being paid as
+                    a result of my participation? Can I participate without pay?</span></p>
+                    <p>
+                        Yes. We will accept applications from those who, for whatever reason, wish to participate without
+                        pay. The application should make it clear that no payment is expected by the applicant. Those
+                        participating without pay will still be evaluated upon completion of each milestone and provided
+                        with feedback, but will not receive the stipend and will not be eligible for the free trip to DConf.
+                    </p>
+                    <p class="pheader"><span>What is Symmetry Investments?</strong></span></p>
+                    <p>
+                        Symmetry Investments is a global investment company with offices in Hong Kong, London, Singapore,
+                        Jersey &amp; Cayman Islands. We have been in business since 2014 after successfully spinning off
+                        from a major New York-based hedge fund.
+                    </p>
+                    <p>
+                        At Symmetry, we seek to engage in intelligent risk-taking to create value for our clients, partners,
+                        and employees. We derive our edge from our capacity to generate Win-Wins&mdash;in the broadest
+                        sense. Win-Win is our fundamental ethical and strategic principle. By generating Win-Wins, we can
+                        create unique solutions that reconcile perspectives that are usually seen as incompatible or
+                        opposites, and encompass the best that each side has to offer. We integrate fixed-income arbitrage
+                        with global macro strategies in a novel way. We invent and develop technology that focuses on the
+                        potential of human-machine integration. We build systems where machines do what they do best:
+                        supporting people to do what people do best. We are creating a collaborative meritocracy, a culture
+                        where individual contribution serves both personal and collective goals&mdash;and is rewarded
+                        accordingly. We value both ownership thinking <em>and</em> cooperative team spirit, self-realization
+                        <em>and</em> community.
+                    </p>
+                    <p>
+                        People at Symmetry Investments have been active participants in the D community since 2014. We have
+                        sponsored the development of <a
+                        href="https://dlang.org/blog/2017/05/31/project-highlight-excel-d/">excel-d</a>, <a
+                        href="https://github.com/atilaneves/dpp">dpp</a>, <a
+                        href="https://github.com/kaleidicassociates/autowrap">autowrap</a>, <a
+                        href="https://github.com/libmir/mir-algorithm">mir-algorithm</a>, and <a
+                        href="https://github.com/symmetryinvestments/overview">various other projects</a>. We started
+                        Symmetry Autumn of Code in 2018 and hosted <a href="http://dconf.org/2019/schedule/index.html">DConf
+                        2019</a>, <a href="https://dconf.org/2022/index.html">DConf '22</a>, and <a
+                        href="https://dconf.org/2023/index.html">DConf '23</a> in London.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+<script>
+    function hamburger() {
+        var x = document.getElementById("small-menu");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+</html>
