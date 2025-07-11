@@ -16,34 +16,36 @@
             font-weight: 400;
             font-size: larger;
             text-rendering: optimizeLegibility;
-            background-color: #171717;
-            color: #e6e6e6;
-        }
-        article {
-            background-color: #2a2a2a;
+            background-color: #fff;
+            color: darkslategray;
         }
         h1, h2 {
             text-transform: uppercase;
             text-align: center;
-            background-color: #004173;
+            color: #000;
+            border-bottom: solid black 2px;
         }
         a {
-            color: #0078d4;
+            color: darkblue;
+        }}
+        a:visited {
+            color: blueviolet;
         }
-        a:hover {
-            color: #278cda;
+        a:visited:hover, a:hover {
+            color: orangered;
         }
         b {
             text-decoration: underline;
         }
         .pheader {
-            background-color: #4a4a4a;
             padding: 10px;
         }
 
         #menu {
-           /* background-color: #79bff8; */
-           color: whitesmoke;
+            background-color: whitesmoke;
+        }
+        #menu a, #menu a:visited, #menu a:visited:hover, #menu a:hover {
+        color: #000;
         }
 
         @media screen and (min-width: 600px) {
@@ -61,7 +63,7 @@
 </head>
 
 <body class="w3-justify">
-    <nav class="w3-card-2" id="menu">
+    <nav id="menu">
         <div class="w3-bar">
             <a href="#" class="w3-bar-item w3-btn w3-block">HOME</a>
             <a href="#details" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">ABOUT</a>
@@ -82,7 +84,7 @@
             <h1>Symmetry Autumn of Code</h1>
         </header>
         <section>
-            <article id="introduction" class="w3-card-2">
+            <article id="introduction">
                 <div class="w3-container">
                     <p>
                         <a href="https://dlang.org">The D Language Foundation</a> and <a
@@ -104,7 +106,7 @@
                         part-time for four months, to <a href="#community">please let us know.</a>
                     </p>
                 </div>
-                <aside id="overview" class="w3-container w3-card-2">
+                <aside id="overview" class="w3-container ">
                     <h3>The Five Ws</h3>
                     <ul>
                         <li><b>Who</b>: Coders who are at least 18 years of age, with preference given to university students.</li>
@@ -119,7 +121,7 @@
 
         </section>
         <section>
-            <article id="details" class="w3-card-2">
+            <article id="details">
                 <h2>The Details</h2>
                 <div class="w3-container">
                     <h3>What's in it for you</h3>
@@ -133,7 +135,7 @@
                         DConf</b>, including reimbursement of travel and hotel expenses.
                     </p>
                 </div>
-                <aside class="w3-container w3-card-2">
+                <aside class="w3-container ">
                     <h3>Important dates</h3>
                     <ul>
                         <li><b>August 31st</b> - Application deadline</li>
@@ -175,7 +177,7 @@
                         <strong>Please send your documents in Markdown format. We do not accept files in any other format</strong>.
                     </p>
                     <div id="propsals">
-                        <p class="pheader w3-card-2"><span>Project proposals</span></p>
+                        <p class="pheader "><span>Project proposals</span></p>
                         <p>
                             In 800 words or less, describe the project to which you're willing to devote four months of
                             work. Why did you select it? What specific goals do you want to achieve? Will it be completed in
@@ -206,7 +208,7 @@
                         </p>
                     </div>
                     <div id="resume">
-                        <p class="pheader w3-card-2"><span>Résumé</span></p>
+                        <p class="pheader "><span>Résumé</span></p>
                         <p>
                             Briefly explain who you are and why you should be selected. Describe your experience working
                             with the D programming language or the language you're most comfortable working with. Tell us
@@ -275,15 +277,15 @@
             </article>
         </section>
         <section>
-            <article id="faq" class="w3-card-2">
+            <article id="faq">
                 <h2>FAQ</h2>
                 <div class="w3-container">
-                    <p class="pheader w3-card-2"><span>Can I use other languages alongside the D language in my project?</span></p>
+                    <p class="pheader "><span>Can I use other languages alongside the D language in my project?</span></p>
                     <p>
                         Yes, but make sure that the focus is on the D language. We are more likely to select applicants that
                         prioritize it.
                     </p>
-                    <p class="pheader w3-card-2"><span>How do you select applicants?</span></p>
+                    <p class="pheader "><span>How do you select applicants?</span></p>
                     <p>
                         We like to see experience with the D language, but a good track record of finished projects in
                         any language is valuable. Preference will be given to graduate and postgraduate students. The
@@ -293,22 +295,22 @@
                         we're looking for. Finding a mentor before applying is not a big factor, but can make the
                         difference if there are more proposals than available slots when all other things are equal.
                     </p>
-                    <p class="pheader w3-card-2"><span>Can I work with a partner or a team of people?</span></p>
+                    <p class="pheader "><span>Can I work with a partner or a team of people?</span></p>
                     <p>
                         No. Symmetry Autumn of Code is intended for solo work.
                     </p>
-                    <p class="pheader w3-card-2"><span>Can I earn course credit for participating in SAOC?</span></p>
+                    <p class="pheader "><span>Can I earn course credit for participating in SAOC?</span></p>
                     <p>
                         Please check with your school for their policy. If they determine you are eligible for course
                         credit, we can provide documentation for them upon a successful final evaluation of your SAOC
                         project.
                     </p>
-                    <p class="pheader w3-card-2"><span>Can the schedule be adjusted to adapt to my school or work schedule?</span></p>
+                    <p class="pheader "><span>Can the schedule be adjusted to adapt to my school or work schedule?</span></p>
                     <p>
                         Unfortunately, no. We understand that our schedule will not work for everyone, and we are sorry if
                         it conflicts with yours. However, we welcome contributions to D outside of SAOC.
                     </p>
-                    <p class="pheader w3-card-2"><span>How do I find a mentor?</span></p>
+                    <p class="pheader "><span>How do I find a mentor?</span></p>
                     <p>
                         A post in <a href="https://forum.dlang.org/group/announce">the D.announce forum</a> is the best
                         place to start.
@@ -321,14 +323,14 @@
                         someone who would be skilled in your proposed project area, don't hesitate to get in touch with
                         them to discuss your project and let us know about it in your application.
                     </p>
-                    <p class="pheader w3-card-2"><span>Is SAOC considered an internship, a job, or any form of employment?</span></p>
+                    <p class="pheader "><span>Is SAOC considered an internship, a job, or any form of employment?</span></p>
                     <p>
                         None of the above. SAOC is an activity that the participants perform as independent developers for
                         which they are paid a stipend. Applicants should check with their school or employer to ensure that
                         participation in SAOC does not violate any school or local government regulations or contractual
                         requirements.
                     </p>
-                    <p class="pheader w3-card-2"><span>What if my school/employer/local government does prohibit me from being paid as
+                    <p class="pheader "><span>What if my school/employer/local government does prohibit me from being paid as
                     a result of my participation? Can I participate without pay?</span></p>
                     <p>
                         Yes. We will accept applications from those who, for whatever reason, wish to participate without
@@ -336,7 +338,7 @@
                         participating without pay will still be evaluated upon completion of each milestone and provided
                         with feedback, but will not receive the stipend and will not be eligible for the free trip to DConf.
                     </p>
-                    <p class="pheader w3-card-2"><span>What is Symmetry Investments?</strong></span></p>
+                    <p class="pheader "><span>What is Symmetry Investments?</strong></span></p>
                     <p>
                         Symmetry Investments is a global investment company with offices in Hong Kong, London, Singapore,
                         Jersey &amp; Cayman Islands. We have been in business since 2014 after successfully spinning off
