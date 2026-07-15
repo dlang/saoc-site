@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta property="og:title" content="Symmetry Autumn of Code">
+    <meta property="og:description"
+        content="Symmetry Autumn of Code is an annual programming event sponsored by Symmetry Investments and organized by the D Language Foundation to enhance the D language ecosystem.">
+    <meta property="og:url" content="https://saoc.io/">
+    <meta property="og:type" content="website">
+    <!--TODO: og:image stuff-->
+    <link href="./includes/w3.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: 400;
+            font-size: larger;
+            text-rendering: optimizeLegibility;
+            background-color: whitesmoke;
+            color: darkslategray;
+        }
+        h1, h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: #000;
+            border-bottom: solid black 2px;
+        }
+        a {
+            color: darkblue;
+        }
+        a:visited {
+            color: blueviolet;
+        }
+        a:visited:hover, a:hover {
+            color: orangered;
+        }
+        b {
+            text-decoration: underline;
+        }
+        .pheader {
+            font-weight: bold;
+            padding: 10px;
+            border-bottom: solid lightgray 2px;
+        }
+        #menu a, #menu a:visited, #menu a:visited:hover, #menu a:hover {
+        color: #000;
+        }
+
+        @media screen and (min-width: 600px) {
+            header {
+                text-align: left;
+            }
+        }
+        @media screen and (min-width: 1080px) {
+            main {
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body class="w3-justify">
+    <nav id="menu">
+        <div class="w3-bar">
+            <a href="./index.html" class="w3-bar-item w3-btn w3-block">HOME</a>
+            <a href="#details" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">ABOUT</a>
+            <a href="#participants" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">APPLY</a>
+            <a href="#faq" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">FAQ</a>
+            <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">DLANG.ORG</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-btn w3-right w3-hide-large" onclick="hamburger()">&#9776;</a>
+        </div>
+        <div id="small-menu" class="w3-bar-block w3-hide w3-hide-large">
+            <a href="#details" class="w3-bar-item w3-btn w3-block">ABOUT</a>
+            <a href="#participants" class="w3-bar-item w3-btn w3-block">APPLY</a>
+            <a href="#faq" class="w3-bar-item w3-btn w3-block">FAQ</a>
+            <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block">DLANG.ORG</a>
+        </div>
+    </nav>
+    <main role="main">
+        <header>
+            <h1>SAOC Project Proposal Ideas</h1>
+        </header>
+        <section>
+            <article id="projects">
+                <div class="w3-container">
+                    <p>
+                        In past SAOC editions, we have provided applicants with a list of project ideas based loosely on our
+                        priorities. Though we emphasized that applicants were free to propose their own projects, the overwhelming
+                        majority of applicants submitted one of our suggested projects. Often, multiple applicants proposed the
+                        same project.
+                    </p>
+                    <p>
+                        For SAOC 2026, we want to turn things around. We're providing only one project suggestion. The emphasis
+                        this year is on you, the applicant, to determine what sort of project you think would be beneficial to
+                        the D ecosystem.
+                    </p>
+                    <p>
+                        We encourage you to explore the D ecosystem to look for inspiration.
+                        <a href="https://github.com/orgs/dlang/repositories">Scroll through our repositories</a> to see if lightning strikes.
+                        Reach out to other D programmers <a href="https://forum.dlang.org/">in our forums</a> and
+                        <a href="https://discord.gg/bMZk9Q4">our community Discord server</a>. They know where the holes are that need filling
+                        and will surely have suggestions. Some of them may even have work that needs doing on their own open source D projects.
+                        Ask around, do a little bit of research, and surprise us!
+                    </p>
+                    <p>
+                        We anticipate multiple applicants will choose our suggested project below. Should you be one of them, we
+                        strongly recommend you submit a second, custom proposal. Remember, only one applicant can be selected for
+                        the suggested project. If that's not you, the you can't be selected at all without a backup.
+                    </p>
+                    <p>
+                        Note that there is no limit to the number of proposals you can submit, but you only need to send
+                        one copy of your résumé.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article id="projects">
+                <h2>Project Suggestion</h2>
+                <p>
+                    The difficulty level of our single project idea for SAOC 2026 can be described as <i>hard</i>.
+                    The prerequisites listed below will be extremely helpful.
+                </p>
+                <div class="w3-container">
+                    <h3>Dcompute DirectX 12 Backend</h3>
+                    <p>
+                        Dcompute is a compiler extension and runtime library that interfaces to OpenCL and CUDA via
+                        the SPIRV and PTX backends of LLVM to generate programs that can run D code natively on GPUs.
+                        LLVM's SPIRV backend has recently been enhanced to be able to produce compute shaders for use
+                        with the DirectZ 12 API for graphics and compute. The goal of this project is to extend the
+                        LLVM D compiler (LDC) to utilise the new capabilities of the SPIRV backend to produce and run
+                        DirextX 12 compute shaders.
+                    </p>
+                    <p>
+                        <strong>Prerequisites: </strong>Experience with compilers (preferably LLVM and/or DMD); C++ or D;
+                        graphics or compute APIs (preferably DirectX).
+                    </p>
+                    <p><strong>Project goals:</strong></p>
+                    <ul>
+                        <li>Build LDC + LLVM with the vulkan backend enabled, become familiar with the IR accpted by
+                            the SPIRV Vulkan backend</li>
+                        <li>Add DirectX as a backend for Dcompute to LDC
+                            <ul>
+                                <li>add command line switches</li>
+                                <li>generate IR in the format accepted by the SPIRV DirectX backend.</li>
+                                <li>Design a consistent ABI for the compiler and Dcompute runtime to interface with each
+                                    other to launch compute shaders</li>
+                            </ul>
+                        </li>
+                        <li>Write a dcompute runtime backend to interface with DirectX</li>
+                        <li>Test and validate generated shaders using DirectX</li>
+                    </ul>
+                    <p>
+                        <strong>Resources:</strong>
+                        <ul>
+                            <li><a href="">The LDC compiler</a></li>
+                            <li><a href="https://github.com/llvm/llvm-project/">The LLVM project</a></li>
+                            <li><a href="https://github.com/libmir/dcompute/">The dcompute project</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+<script>
+    function hamburger() {
+        var x = document.getElementById("small-menu");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+</html>

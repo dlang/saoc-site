@@ -27,7 +27,7 @@
         }
         a {
             color: darkblue;
-        }}
+        }
         a:visited {
             color: blueviolet;
         }
@@ -38,6 +38,7 @@
             text-decoration: underline;
         }
         .pheader {
+            font-weight: bold;
             padding: 10px;
             border-bottom: solid lightgray 2px;
         }
@@ -66,6 +67,7 @@
             <a href="#details" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">ABOUT</a>
             <a href="#participants" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">APPLY</a>
             <a href="#faq" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">FAQ</a>
+            <a href="./projects.html" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">PROJECT IDEAS</a>
             <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block w3-hide-small w3-hide-medium">DLANG.ORG</a>
             <a href="javascript:void(0)" class="w3-bar-item w3-btn w3-right w3-hide-large" onclick="hamburger()">&#9776;</a>
         </div>
@@ -73,6 +75,7 @@
             <a href="#details" class="w3-bar-item w3-btn w3-block">ABOUT</a>
             <a href="#participants" class="w3-bar-item w3-btn w3-block">APPLY</a>
             <a href="#faq" class="w3-bar-item w3-btn w3-block">FAQ</a>
+            <a href="./projects.html" class="w3-bar-item w3-btn w3-block">PROJECT IDEAS</a>
             <a href="https://dlang.org/" class="w3-bar-item w3-btn w3-block">DLANG.ORG</a>
         </div>
     </nav>
@@ -85,7 +88,7 @@
                 <div class="w3-container">
                     <p>
                         <a href="https://dlang.org">The D Language Foundation</a> and <a
-                        href="http://symmetryinvestments.com/">Symmetry Investments</a> are pleased to present the 2025
+                        href="http://symmetryinvestments.com/">Symmetry Investments</a> are pleased to present the 2026
                         edition of the Symmetry Autumn of Code (SAOC). We invite motivated individuals who enjoy solving
                         problems with code to apply for the opportunity to earn money hacking on D projects. You <a
                         href="#participants">can learn who's eligible and how to apply below</a>.
@@ -96,19 +99,13 @@
                         you to put your skills to use in guiding and advising the coders who will join us this autumn. We'll
                         even pay you for it! <a href="#mentors">Keep reading to see how you can participate</a>.
                     </p>
-                    <p>
-                        We're always looking for more project ideas from the D community. Each SAOC applicant will need to
-                        submit a project proposal as part of the application. We ask anyone with an idea for a project that
-                        would benefit the D ecosystem and that a solo programmer could reasonably expect to work on
-                        part-time for four months, to <a href="#community">please let us know.</a>
-                    </p>
                 </div>
                 <aside id="overview" class="w3-container ">
                     <h3>The Five Ws</h3>
                     <ul>
                         <li><b>Who</b>: Coders who are at least 18 years of age, with preference given to university students.</li>
                         <li><b>What</b>: Get paid to create a new project in the D ecosystem or improve an existing one using the D programming language.</li>
-                        <li><b>When</b>: From September 15, 2025, to January 14, 2026.</li>
+                        <li><b>When</b>: From September 15, 2026, to January 14, 2027.</li>
                         <li><b>Where</b>: Your favorite coding space.</li>
                         <li><b>Why</b>: To enrich the D programming language ecosystem.</li>
                         <li><b>How</b>: Send your application (described below) to <a href="mailto:social@dlang.org">social@dlang.org</a>.</li>
@@ -127,9 +124,8 @@
                         programming language community. Each participant will be paid <b>USD $1000</b> upon successful completion
                         of each of the first three milestones (a total of <b>$3000</b> per participant). At the end of
                         the fourth milestone, the overall progress of each participant will be evaluated by the SAOC
-                        committee, and at least one participant will be selected to receive a final payment of <b>USD
-                        $1000</b>. That lucky coder will also be eligible for <b>a free pass to the next real-world
-                        DConf</b>, including reimbursement of travel and hotel expenses.
+                        judges, and one participant will be selected to receive a final payment of <b>USD $1000</b>
+                        along with <b>a free pass to our annual DConf</b>, including reimbursement of travel and hotel expenses.
                     </p>
                 </div>
                 <aside class="w3-container ">
@@ -173,6 +169,13 @@
                         you sell us on your project. The résumé is where you show us why you're the person to get it done.
                         <strong>Please send your documents in Markdown format. We do not accept files in any other format</strong>.
                     </p>
+                    <p>
+                        IMPORTANT: In order for us to pay you, you must be able to receive payments from Wise, PayPal,
+                        or a US bank. Financial regulations around the frequently change. If we were able to send payments
+                        to a country during past editions of SAOC, there's no guarantee we'll be able to do so during
+                        future editions. Before submitting your application, please ensure you are prepared to receive
+                        payments from Wise, PayPal, or a US bank.
+                    </p>
                     <div id="propsals">
                         <p class="pheader "><span>Project proposals</span></p>
                         <p>
@@ -183,18 +186,9 @@
                         </p>
                         <p>
                             Your project should require enough effort to keep you occupied throughout the event while
-                            also being beneficial to the D community. You can find a list of project ideas in <a
-                            href="https://github.com/dlang/project-ideas/blob/master/saoc-ideas.md">the
-                            dlang/project-ideas repository</a>. You are not required to select a project from this list,
-                            but they have been selected by members of the D Language Foundation as relevant to our
-                            current goals.
-                        </p>
-                        <p>
-                            You may also find an idea you like <a
-                            href="https://github.com/dlang/project-ideas/issues">in the issue tracker in the same
-                            repository</a>. However, this list is uncurated and some projects may no longer be relevant.
-                            Be sure to <a href="https://forum.dlang.org/group/general">ask in the D forums before
-                            selecting one</a>, where you may also ask for additional project ideas.                    
+                            also being beneficial to the D community. In the past, we have provided a list of potential
+                            project ideas. This year, we are putting a heavy emphasis on custom proposals. See 
+                            <a href="./projects.html">the Projects Ideas page</a> for more information.
                         </p>
                         <p>
                             It is not an absolute requirement that applicants find a mentor before applying, but doing
@@ -208,7 +202,7 @@
                         <p class="pheader "><span>Résumé</span></p>
                         <p>
                             Briefly explain who you are and why you should be selected. Describe your experience working
-                            with the D programming language or the language you're most comfortable working with. Tell us
+                            with the D programming language or the language you're with which you have the most experience. Tell us
                             about your life as a programmer: programming languages you've learned, projects you've worked
                             on, and programming-related topics you've studied. We recommend including a link to your GitHub
                             profile if you have any existing work there that you'd like us to see.
@@ -233,16 +227,16 @@
                     <p>
                         We are looking for patient and experienced D programmers who are willing to provide support and
                         guidance to the coders who pursue their projects during the four months of SAOC. Mentors are
-                        volunteers who the participants can look to for advice on the D programming language and how to
-                        approach solving the problems they encounter as they carry out their work. Participants and mentors
-                        will work together to establish the project milestones that will be used to evaluate performance.
-                        Mentors will be expected to keep abreast of their coder's progress and to encourage their coder is
+                        volunteers whom the participants can look to for advice on the D programming language and
+                        the thorny challenges they may encounter as they carry out their work. Participants and mentors
+                        work together to establish the project milestones that will be used to evaluate performance.
+                        Mentors are expected to keep abreast of their coder's progress and to encourage their coder is
                         achieving each milestone.
                     </p>
                     <p>
-                        At the end of the event, each mentor whose student successfully completes the event will receive
-                        a one-time payment of <b>$500</b>. Mentors of unsuccessful projects may also be eligible for the
-                        same payment at the SAOC committee's discretion.
+                        Each mentor whose coder successfully completes the event will receive a one-time payment of
+                        <b>$500</b>. Mentors of unsuccessful projects may also be eligible for the same payment
+                        at the discretion of the SAOC judges.
                     </p>
                     <p>
                         If you are interested in becoming a mentor, please submit an email to social@dlang.org and let
@@ -254,21 +248,8 @@
                         SAOC applicants in need of a mentor.
                     </p>
                     <p>
-                        Please note that mentors are not allowed to simultaneously participate as coders. Choose to apply only for one role!
-                    </p>
-                    <h3 id="community">Community</h3>
-                    <p>
-                        Community members are encouraged to submit ideas for potential projects. Project suggestions should
-                        require at least four months of work (assuming a minimum of 20 hours per week) and should be
-                        beneficial to the D community. Ideally, each project suggestion should outline specific goals that
-                        participants and their mentors can use to measure progress. The project should also provide a
-                        reasonable amount of challenge. For example, <i>improve Visual D</i> is not an acceptable
-                        suggestion, but a list of specific features to add to Visual D is fine.
-                    </p>
-                    <p>
-                        Develop your project ideas in <a href="https://forum.dlang.org/group/general">the D forums</a> and
-                        submit them as individual issues to <a href="https://github.com/dlang/project-ideas/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">the
-                        dlang/project-ideas repository</a>.
+                        Please note that mentors are not allowed to simultaneously participate as coders. Choose to apply
+                        only for one role!
                     </p>
                 </div>
             </article>
